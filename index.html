@@ -294,14 +294,29 @@
       <div id="message">Yehhhh! You’ve completed our love puzzle ❤️ Forever together!</div>
       <div id="extraLine">Very good, my girl! ❤️ This is our first birthday picture together — back then we were just best friends, and today we are the best for each other 🫂🫀.</div>
       <br>
-      <button class="yes-btn" onclick="window.location.href='https://jumpshare.com/embed/rzWbTpDeHuJ4ARrJ5rnd';">
-        🎁 Click for Final Surprise
-      </button>
-    </div>
+      <button class="yes-btn" onclick="showVideo()">
+  🎁 Click for Final Surprise
+</button>
+
+<div id="videoContainer" style="display:none; margin-top:20px;">
+  <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+    <iframe id="js_video_iframe" 
+            src="https://jumpshare.com/embed/PnRDkussWDzaMyUoZVPu" 
+            frameborder="0" 
+            webkitallowfullscreen 
+            mozallowfullscreen 
+            allowfullscreen 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    </iframe>
   </div>
 </div>
-
+      
 <script>
+  function showVideo(){
+  document.getElementById("videoContainer").style.display = "block";
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
   function showPage2() {
     document.getElementById('page1').style.display = 'none';
     document.getElementById('page2').style.display = 'block';
